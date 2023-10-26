@@ -1,0 +1,37 @@
+body{
+    background-color:azure;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h1{
+    font-size: 46px;
+    display: flex;
+    justify-content: center;
+}
+.container {
+    width: 500px; /* Set the desired width for your container */
+    height: 500px; /* Set the desired height for your container */
+    border: 1px solid #666;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    background-color: #fff;
+}
+.pixel {
+    border: 1px solid #666;
+    box-sizing: border-box; /* Include borders in width and height calculations */
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
