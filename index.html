@@ -9,15 +9,16 @@
 <body>
     <h1>Etch a Sketch</h1>
     <Div class="main">
+    <p>when enabling random mode or eraser turn it off (by reclicking on it) before choosing another option</p>
     <div class="container"></div>
 
     <div class="bottom">
-    <button>random mode</button>
-    <button onclick=CLearGrid()>clear</button>
-    <button onclick=GridTransparent()>grid</button>
-    <button>erase</button>
-    <button onclick=promptUser()>pixels</button>
-    <input type="color">
+    <button id="isRandom" onclick="randomModeEnabled()" >Random mode</button>
+    <button onclick=CLearGrid() id="refreshButton">Clear</button>
+    <button onclick=GridTransparent()>Grid</button>
+    <button onclick="eraserEnabled()">Eraser</button>
+    <button onclick=promptUser()>Pixels</button>
+    <input id="colorbicker" type="color" onchange="selectedColor()" >
     </div>
     
     </Div>
@@ -25,3 +26,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+

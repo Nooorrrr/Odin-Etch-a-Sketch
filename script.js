@@ -19,7 +19,22 @@ function createGrid(num) {
     pixel.className = "pixel";
     pixel.style.width = `${100 / num}%`; // Calculate the width
     pixel.style.height = `${100 / num}%`; // Calculate the height
+    
+
+    // Add event listener for hover effect
+     pixel.addEventListener('mouseover', () => {
+      pixel.style.backgroundColor = selectedColor();
+      if (randomMode){
+        pixel.style.backgroundColor = getRandomColor();
+      }
+
+      if (eraserMode){
+        pixel.style.backgroundColor = '#fff';
+      }
+  
+    });
     document.querySelector('.container').append(pixel);
+   
   }
 }
 
@@ -36,9 +51,44 @@ function GridTransparent() {
   }
 }
 
+
 function CLearGrid (){
-    let pixels = document.querySelectorAll('.pixel');
-    pixels.forEach((pixel)=>{
-      pixel.style.backGroundColor = "#fff";
-    })
+  document.getElementById('refreshButton').addEventListener('click', () => {
+    location.reload(); // Reload the page
+  });
+}
+
+//function to randomize color 
+
+let randomMode = false;
+
+function randomModeEnabled(){
+    randomMode = !randomMode;
+    console.log("random mode :"+randomMode);
+  return randomMode
+}
+
+function getRandomColor() {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+//color bicker
+
+function selectedColor(){
+    return color = document.getElementById('colorbicker').value;  
+}
+
+//eraser
+
+let eraserMode =false;
+
+function eraserEnabled(){
+  eraserMode = !eraserMode;
+  console.log("eraser enabled :"+eraserMode);
+  return eraserMode;
 }

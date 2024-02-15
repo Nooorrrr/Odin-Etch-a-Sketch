@@ -7,7 +7,9 @@ h1{
     font-size: 46px;
     display: flex;
     justify-content: center;
+    margin-bottom: 0;
 }
+
 .container {
     width: 500px;
     height: 500px;
@@ -17,10 +19,12 @@ h1{
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
     background-color: #fff;
 }
+
 .pixel {
     border: 1px solid #666;
     box-sizing: border-box;
 }
+
 .main{
     display: flex;
     flex-direction: column;
@@ -37,9 +41,16 @@ h1{
 button{
     cursor: pointer;
     border: none;
-    margin: 5%;
+    margin: 3% 2%;
     font-weight: bold;
-    border-radius: 25px;
+    border-radius: 10px;
     background-color: rgb(139, 184, 184);
-    height: 20px;
+    height: 35px;
+    width: 90px;
+}
+
+p{
+    padding-top: 0;
+    font-size: 12px;
+    font-weight:700;
 }
