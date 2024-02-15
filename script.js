@@ -53,10 +53,11 @@ function GridTransparent() {
 
 
 function CLearGrid (){
-  //not optimized funnction to refresh the page just to clear the grid
+  //not practicle to refresh the page just to clear the grid
  /* document.getElementById('refreshButton').addEventListener('click', () => {
     location.reload(); // Reload the page
   });*/
+  
   let pixels = document.querySelectorAll('.pixel');
   pixels.forEach((pixel) => {
     pixel.style.backgroundColor = '#fff';
