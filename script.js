@@ -42,7 +42,7 @@ function GridTransparent() {
   let pixels = document.querySelectorAll('.pixel');
   if (pixels[0].style.border === "1px solid transparent") {
     pixels.forEach((pixel) => {
-      pixel.style.border = "1px solid #666";
+      pixel.style.border = "0.5px solid #666";
     });
   } else {
     pixels.forEach((pixel) => {
@@ -53,9 +53,16 @@ function GridTransparent() {
 
 
 function CLearGrid (){
-  document.getElementById('refreshButton').addEventListener('click', () => {
+  //not optimized funnction to refresh the page just to clear the grid
+ /* document.getElementById('refreshButton').addEventListener('click', () => {
     location.reload(); // Reload the page
+  });*/
+  let pixels = document.querySelectorAll('.pixel');
+  pixels.forEach((pixel) => {
+    pixel.style.backgroundColor = '#fff';
   });
+
+
 }
 
 //function to randomize color 
